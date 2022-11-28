@@ -12,11 +12,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', ...fontFamily.sans],
+        custom: ['var(--font-inter)', ...fontFamily.sans],
       },
 
       colors: {
         primary: '#00A7B5',
+
+        whatsapp: '#00BB2D',
+        email: '#DB4A39',
 
         gray: {
           300: '#CFCFCF',

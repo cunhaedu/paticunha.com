@@ -2,7 +2,7 @@ import { useKeenSlider } from 'keen-slider/react';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
-import { projects } from '../mocks/projects.mock';
+import { projects } from '../data/projects';
 
 import 'keen-slider/keen-slider.min.css';
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';

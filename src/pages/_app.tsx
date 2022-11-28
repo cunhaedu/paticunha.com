@@ -14,7 +14,7 @@ const inter = Inter({
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider enableSystem={true} attribute="class">
-      <main className={`${inter.variable} font-sans`}>
+      <main className={`${inter.variable} font-custom`}>
         <Header />
         <Component {...pageProps} />
       </main>

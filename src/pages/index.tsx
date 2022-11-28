@@ -1,8 +1,20 @@
 import Image from 'next/image';
+import { useState } from 'react';
 
 import PerfilImg from '../../public/assets/perfil.jpg';
+import { BudgetDialog } from '../components/BudgetDialog';
 
 export default function Home() {
+  let [isBudgetDialogOpen, setIsBudgetDialogOpen] = useState(false);
+
+  function openBudgetDialogModal() {
+    setIsBudgetDialogOpen(true);
+  }
+
+  function closeBudgetDialogModal() {
+    setIsBudgetDialogOpen(false);
+  }
+
   return (
     <div className='w-full h-[calc(100vh-4rem)]'>
       <div className='h-full md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl flex flex-col md:flex-row items-center align-middle justify-between p-5 gap-14 mx-auto'>
@@ -17,9 +29,17 @@ export default function Home() {
             de interfaces simples, intuitivas e descomplicadas.
           </p>
 
-          <button className='md:w-1/3 bg-primary px-5 py-3 rounded-lg text-white font-bold hover:brightness-110'>
+          <button
+            className='md:w-1/3 bg-primary px-5 py-3 rounded-lg text-white font-bold hover:brightness-110'
+            onClick={openBudgetDialogModal}
+          >
             Orçamento
           </button>
+
+          <BudgetDialog
+            isOpen={isBudgetDialogOpen}
+            closeModal={closeBudgetDialogModal}
+          />
         </section>
 
         <aside className='lg:min-h-full w-full md:w-[50vw] lg:w-[30vw] flex items-center justify-center'>
