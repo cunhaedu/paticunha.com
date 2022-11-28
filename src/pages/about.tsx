@@ -25,15 +25,20 @@ export default function About() {
           </h1>
 
           <p className='text-center md:text-left font-medium text-gray-500 dark:text-white'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut magna,
-            scelerisque vitae augue et, cursus placerat lorem. In nisi lacus,
-            eleifend tincidunt quam et, consequat semper.
+            Patricia Assunção é uma UI/UX Designer focada no desenvolvimento de
+            interfaces digitais para sites e aplicativos.
           </p>
 
           <p className='text-center md:text-left font-medium text-gray-500 dark:text-white'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut magna,
-            scelerisque vitae augue et, cursus placerat lorem. In nisi lacus,
-            eleifend tincidunt quam et, consequat semper.
+            Muito além de funcionalidades, ela procura sempre trazer no seu
+            trabalho as melhores experiências aos usuários através da criação de
+            interfaces simples, intuitivas e descomplicadas.
+          </p>
+
+          <p className='text-center md:text-left font-medium text-gray-500 dark:text-white'>
+            Além disso, como pessoa a Patricia não deixa nada a desejar, sendo
+            uma pessoa atenciosa e que colabora positivamente com o ambiente ao
+            seu redor.
           </p>
         </section>
       </div>
