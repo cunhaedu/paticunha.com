@@ -4,6 +4,10 @@ import { Fragment, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
 
+import { LinkedinIcon } from './icons/LinkedinIcon';
+import { BehanceIcon } from './icons/BehanceIcon';
+import { MailIcon } from './icons/MailIcon';
+
 import { ActiveLink } from './ActiveLink';
 
 export function Header() {
@@ -54,21 +58,49 @@ export function Header() {
           </div>
           <Popover.Group
             as="nav"
-            className="hidden md:flex space-x-10 font-medium text-center self-center mx-auto"
+            className="hidden md:flex w-full justify-between mx-12"
           >
-            <ActiveLink href='/'>
-              <span>Início</span>
-            </ActiveLink>
+            <span className='text-2xl font-bold cursor-default'>P</span>
 
-            <ActiveLink href='/about'>
-              <span>Sobre</span>
-            </ActiveLink>
+            <div className='flex space-x-10 font-medium text-center self-center'>
+              <ActiveLink href='/'>
+                <span>Início</span>
+              </ActiveLink>
 
-            <ActiveLink href='/projects'>
-              <span>Projetos</span>
-            </ActiveLink>
+              <ActiveLink href='/about'>
+                <span>Sobre</span>
+              </ActiveLink>
 
-            {renderThemeButton()}
+              <ActiveLink href='/projects'>
+                <span>Projetos</span>
+              </ActiveLink>
+
+              {renderThemeButton()}
+            </div>
+
+            <div className='flex space-x-5 font-medium text-center self-center items-center align-middle justify-center'>
+              <a
+                href="https://www.behance.net/patiassuncao"
+                target="_blank"
+                rel="noopener noreferrer"
+                className='p-1'
+              >
+                <BehanceIcon size={28} />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/patiassuncao/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className='p-1'
+              >
+                <LinkedinIcon size={28} />
+              </a>
+
+              <a href='mailto:paticunha2001@gmail.com' className='p-1'>
+                <MailIcon size={28} />
+              </a>
+            </div>
 
           </Popover.Group>
 
@@ -97,12 +129,12 @@ export function Header() {
 
                 <div className="py-6 px-5 space-y-6 h-full">
                   <div className="flex flex-col gap-10 justify-center items-center align-middle h-[calc(100%-(4.5rem+160px))]">
-                      <Popover.Button
-                        className='text-3xl text-gray-500 hover:text-black hover:dark:text-white'
-                        onClick={() => router.push('/')}
-                      >
-                          Início
-                      </Popover.Button>
+                    <Popover.Button
+                      className='text-3xl text-gray-500 hover:text-black hover:dark:text-white'
+                      onClick={() => router.push('/')}
+                    >
+                      Início
+                    </Popover.Button>
 
                     <Popover.Button
                       className='text-3xl text-gray-500 hover:text-black hover:dark:text-white'
@@ -117,6 +149,30 @@ export function Header() {
                     >
                       Projetos
                     </Popover.Button>
+
+                    <div className='flex space-x-5 font-medium text-center self-center items-center align-middle justify-center'>
+                      <a
+                        href="https://www.behance.net/patiassuncao"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className='p-1'
+                      >
+                        <BehanceIcon size={28} />
+                      </a>
+
+                      <a
+                        href="https://www.linkedin.com/in/patiassuncao/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className='p-1'
+                      >
+                        <LinkedinIcon size={28} />
+                      </a>
+
+                      <a href='mailto:paticunha2001@gmail.com' className='p-1'>
+                        <MailIcon size={28} />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
