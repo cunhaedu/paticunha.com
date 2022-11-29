@@ -35,7 +35,7 @@ export default function Projects() {
 
           <div ref={sliderRef} className="keen-slider flex gap-10 mt-24 md:mt-10 pr-32">
             {projects.map(project => (
-              <div key={project.id} className='keen-slider__slide flex flex-col gap-2 align-middle justify-center min-w-[200px] md:min-w-[400px] h-full'>
+              <div key={project.id} className='keen-slider__slide flex flex-col gap-2 align-middle justify-center min-w-[200px] md:w-[400px] h-full'>
                 <Image
                   src={project.bannerUrl}
                   alt={project.name}
@@ -44,7 +44,7 @@ export default function Projects() {
                   className='max-h-[200px] w-[200px] md:max-h-[400px] md:w-[400px] rounded-lg object-cover object-center'
                 />
 
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between w-[200px] md:w-[400px]">
                   <strong className='font-bold'>{project.name}</strong>
                   <a href={project.link} target="_blank" rel="noopener noreferrer">
                     <ArrowTopRightOnSquareIcon className='w-6 h-6 hover:text-primary duration-500 transition-colors' />
